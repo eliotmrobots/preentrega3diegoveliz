@@ -1,0 +1,99 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+@use "../utilities/extend";
+
+/* servicio */
+.servicios-destacados {
+  @include mixin.flex(column, center, center);
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+.servicios-lista {
+  @include mixin.flex(column, center, center);
+  gap: 40px;
+
+  h3 {
+    font-size: 1.8rem;
+    color: variables.$background-color-primary;
+    margin-bottom: 20px;
+  }
+
+  .servicio {
+    @include mixin.flex(column, center, center);
+    @extend %card;
+    width: 100%;
+    height: 100%;
+
+    h3 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .fas.fa-car,
+    .fas.fa-tools,
+    .fas.fa-spray-can {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    ol {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+  }
+}
+
+// responsive movil,tables,escritorio
+
+// moviles (hasta 480px)
+@media screen and (max-width: 480px) {
+  .servicios-lista {
+    @include mixin.flex(column, center, center);
+    // flex-direction: column;
+    // align-items: center;
+    gap: 16px;
+  }
+
+  .servicio {
+    width: 100%;
+    font-size: 1rem;
+    padding: 16px;
+  }
+}
+// tablets (481px a 1024px)
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .servicios-lista {
+    @include mixin.flex(column, center, center);
+    // flex-direction: column;
+    // align-items: center;
+    gap: 24px;
+
+    .servicio {
+      width: 80%;
+    }
+  }
+}
+
+// escritorio (1025px en adelante)
+@media screen and (min-width: 1025px) {
+  .servicios-lista {
+    @include mixin.flex(row, center, center);
+    gap: 40px;
+
+    .servicio {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+
+.container-footer {
+  background-color: variables.$background-color-primary;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: variables.$background-color-secondary;
+  gap: 10px;
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+/* FOOTER STYLES */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-links {
+    margin-bottom: 10px;
+    gap: 15px;
+
+    a {
+      margin: 0 10px;
+      font-weight: 600;
+    }
+  }
+
+  .footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+// RESPONSIVE //
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    margin: 0 6px;
+  }
+}

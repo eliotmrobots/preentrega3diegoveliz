@@ -1,0 +1,64 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+
+// Header
+.nav-bar {
+  @include mixin.flex(row, space-between, center);
+  padding: 10px 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000000 0 5px,
+    #161a4d 5px 10px
+  );
+  color: variables.$text-color-primary;
+
+  a {
+    text-decoration: none;
+    color: variables.$text-color-primary;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      color: blue;
+    }
+  }
+  .logo {
+    img {
+      margin: 10px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  // responsive
+}
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}

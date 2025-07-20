@@ -1,0 +1,84 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+// marcas
+.marcas {
+  @include mixin.flex(row, center, center);
+  gap: 20px;
+  margin: 20px auto;
+  width: 25%;
+  max-width: 1200px;
+}
+
+/*main */
+.container-main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: variables.$background-color-primary;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  /* slider foto de trabajos realizados */
+  .slider {
+    max-width: 100%;
+    padding: 40px 20px;
+    background-color: variables.$background-color-secondary;
+    text-align: center;
+
+    .slider-container {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 20px 0;
+
+      img {
+        width: 300px;
+        height: auto;
+        border-radius: 12px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+/* responsive */
+// moviles (hasta 480px)
+@media screen and (max-width: 480px) {
+  .container-main {
+    .slider-container img {
+      width: 240px;
+    }
+  }
+}
+
+// tablets (481px a 1024px)
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .container-main {
+    .slider-container img {
+      width: 280px;
+    }
+  }
+}
+
+// escritorio (más de 1024px)
+@media screen and (min-width: 1025px) {
+  .container-main {
+    .slider-container img {
+      width: 300px;
+    }
+  }
+}

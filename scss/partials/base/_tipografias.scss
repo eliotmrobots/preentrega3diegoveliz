@@ -1,0 +1,25 @@
+/* APLICAR TIPOGRAFÍA GENERAL */
+body {
+  font-family: " gotic", sans-serif;
+}
+
+/* VARIACIONES OPCIONALES POR SECCIÓN */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+p,
+a,
+li {
+  font-weight: 400;
+}
+
+/* TIPOGRAFÍA ESPECIAL (opcional) */
+.title-acento {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #1a1a1a;
+}

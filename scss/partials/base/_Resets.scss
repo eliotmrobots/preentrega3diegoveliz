@@ -1,0 +1,50 @@
+/* reset general  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body  */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(8, 5, 52));
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s infinite alternate;
+  color: #efe8e8;
+  line-height: 1.6;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* enlances generales  */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+/* titulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* listas */
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+/* imagenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

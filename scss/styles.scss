@@ -1,0 +1,14 @@
+// base
+@use "./partials/base/resets";
+@use "./partials/base/tipografias";
+
+// components
+
+@use "./partials/components/footer";
+@use "./partials/components/header";
+@use "./partials/components/hero";
+// @use "./partials/components/layout";
+@use "./partials/components/main";
+@use "./partials/components/pfrecuentes";
+@use "./partials/components/servicio";
+@use "./partials/components/trabajos";
