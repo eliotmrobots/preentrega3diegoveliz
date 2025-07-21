@@ -5,8 +5,25 @@
   @include mixin.flex(row, center, center);
   gap: 20px;
   margin: 20px auto;
-  width: 25%;
+  width: 32%;
   max-width: 1200px;
+}
+.seguros {
+  @include mixin.flex(row, center, center);
+  margin: 20px auto;
+  width: 50%;
+  max-width: 1200px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 /*main */
