@@ -1,7 +1,7 @@
 @use "../utilities/variables";
 @use "../utilities/mixin";
 
-// Header
+// Header //
 .nav-bar {
   @include mixin.flex(row, space-between, center);
   padding: 10px 20px;
@@ -39,26 +39,40 @@
     display: flex;
     gap: 20px;
   }
-  // responsive
 }
-@media screen and (max-width: 768px) {
+
+// Responsive movil //
+@media screen and (max-width: 480px) {
   .nav-bar {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
+    @include mixin.flex(column, center, center);
+    padding: 10px;
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
+}
 
-  .nav-links {
-    flex-direction: row;
-    text-align: center;
-    gap: 10px;
+// Responsive tablet y escritorio //
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .nav-bar {
+    @include mixin.flex(column, space-between, center);
+    padding: 10px 15px;
+
+    .nav-links {
+      gap: 15px;
+    }
   }
+}
 
-  .nav-links a {
-    font-size: 16px;
-  }
+// Responsive pantallas grandes //
+@media screen and (min-width: 1025px) {
+  .nav-bar {
+    @include mixin.flex(row, space-between, center);
+    padding: 10px 20px;
 
-  .logo img {
-    height: 40px;
+    .nav-links {
+      gap: 20px;
+    }
   }
 }

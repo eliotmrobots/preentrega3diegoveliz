@@ -2,7 +2,7 @@
 @use "../utilities/mixin";
 @use "../utilities/extend";
 
-/* hero fotos , h1 , p */
+// hero fotos , h1 , p //
 .hero {
   @extend %hero;
   img {
@@ -46,7 +46,7 @@
   }
 }
 
-/* Responsive para moviles,tables y escritorio */
+// responsive moviles
 @media screen and (max-width: 480px) {
   .hero {
     height: 50vh;
@@ -74,7 +74,7 @@
     }
   }
 }
-// responsive tablets
+// responsive tablets y escritorio //
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
@@ -102,7 +102,7 @@
     }
   }
 }
-// responsive escritorio
+// responsive pantallas grandes //
 @media screen and (min-width: 1025px) {
   .hero {
     height: 80vh;

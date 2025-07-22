@@ -42,3 +42,54 @@
     }
   }
 }
+// Responsive moviles //
+@media screen and (max-width: 480px) {
+  .contenedor-preguntas-frecuentes {
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .preguntas-frecuentes {
+    @include mixin.grid(1, 20px);
+
+    .pf {
+      max-width: 100%;
+      padding: 16px;
+    }
+  }
+}
+// Responsive tablets y escritorio //
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .contenedor-preguntas-frecuentes {
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .preguntas-frecuentes {
+    @include mixin.grid(2, 30px);
+
+    .pf {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+}
+// Responsive pantallas grandes //
+@media screen and (min-width: 1025px) {
+  .contenedor-preguntas-frecuentes {
+    h3 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .preguntas-frecuentes {
+    @include mixin.grid(3, 40px);
+
+    .pf {
+      max-width: 500px;
+      padding: 24px;
+    }
+  }
+}

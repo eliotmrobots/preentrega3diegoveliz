@@ -37,3 +37,48 @@
     }
   }
 }
+// Responsive movil//
+@media screen and (max-width: 480px) {
+  .donde-encontrarnos {
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .mapa-ubicacion iframe {
+    width: 100%;
+    height: 150px;
+  }
+}
+// Responsive tablet y escritorio//
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .donde-encontrarnos {
+    h3 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .mapa-ubicacion iframe {
+    width: 90%;
+    height: 180px;
+  }
+}
+// Responsive pantallas grandes //
+@media screen and (min-width: 1025px) {
+  .donde-encontrarnos {
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .mapa-ubicacion iframe {
+    width: 80%;
+    height: 250px;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+@use "../utilities/extend";
+
+.contenedor-clientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  .boton-contacto {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+
+    .btn-contacto {
+      @extend %card;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+.imagenes-clientes {
+  @include mixin.grid(6, 1fr);
+  @extend %card;
+  justify-items: center;
+  padding: 20px;
+  margin: 20px;
+  gap: 10px;
+  img {
+    width: 120px;
+    height: 120px;
+    max-height: 300px;
+    object-fit: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+// responsive moviles//
+@media screen and (max-width: 480px) {
+  .imagenes-clientes {
+    @include mixin.grid(2, 1fr);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+// responsive tablets y escritorio//
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .imagenes-clientes {
+    @include mixin.grid(3, 1fr);
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+// responsive pantallas grandes //
+@media screen and (min-width: 1025px) {
+  .imagenes-clientes {
+    @include mixin.grid(6, 1fr);
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

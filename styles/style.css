@@ -124,16 +124,37 @@ li {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  footer {
-    padding: 0px;
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 15px;
+    font-size: 12px;
   }
-  footer p {
-    font-size: 13px;
+  .footer .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
-  .footer-links a {
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .footer {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .footer .footer-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    padding: 25px;
     font-size: 16px;
-    margin: 0 6px;
+  }
+  .footer .footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 .nav-bar {
@@ -169,25 +190,44 @@ li {
   gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .nav-bar {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
   }
-  .nav-links {
-    flex-direction: row;
-    text-align: center;
+  .nav-bar .nav-links {
+    flex-direction: column;
     gap: 10px;
   }
-  .nav-links a {
-    font-size: 16px;
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
   }
-  .logo img {
-    height: 40px;
+  .nav-bar .nav-links {
+    gap: 15px;
   }
 }
-.galeria-trabajos, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
+@media screen and (min-width: 1025px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .nav-bar .nav-links {
+    gap: 20px;
+  }
+}
+.contenedor-clientes .boton-contacto .btn-contacto, .imagenes-clientes, .galeria-trabajos, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
   background-color: rgb(11, 48, 66);
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(25, 4, 255, 0.938);
@@ -220,7 +260,6 @@ li {
   text-align: center;
 }
 
-/* hero fotos , h1 , p */
 .hero .hero-texto h1 {
   font-size: 48px;
   font-weight: 600;
@@ -244,7 +283,6 @@ li {
   font-size: 15px;
 }
 
-/* Responsive para moviles,tables y escritorio */
 @media screen and (max-width: 480px) {
   .hero {
     height: 50vh;
@@ -384,7 +422,6 @@ li {
   transform: scale(1.05);
 }
 
-/* responsive */
 @media screen and (max-width: 480px) {
   .container-main .slider-container img {
     width: 240px;
@@ -431,6 +468,42 @@ li {
   background-color: black;
 }
 
+@media screen and (max-width: 480px) {
+  .donde-encontrarnos h3 {
+    font-size: 1.5rem;
+  }
+  .donde-encontrarnos p {
+    font-size: 1rem;
+  }
+  .mapa-ubicacion iframe {
+    width: 100%;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .donde-encontrarnos h3 {
+    font-size: 1.8rem;
+  }
+  .donde-encontrarnos p {
+    font-size: 1.1rem;
+  }
+  .mapa-ubicacion iframe {
+    width: 90%;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .donde-encontrarnos h3 {
+    font-size: 2rem;
+  }
+  .donde-encontrarnos p {
+    font-size: 1.2rem;
+  }
+  .mapa-ubicacion iframe {
+    width: 80%;
+    height: 250px;
+  }
+}
 .contenedor-preguntas-frecuentes {
   display: flex;
   flex-direction: column;
@@ -478,6 +551,48 @@ li {
   margin: 8px 0 0 0;
 }
 
+@media screen and (max-width: 480px) {
+  .contenedor-preguntas-frecuentes h3 {
+    font-size: 1.2rem;
+  }
+  .preguntas-frecuentes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .preguntas-frecuentes .pf {
+    max-width: 100%;
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .contenedor-preguntas-frecuentes h3 {
+    font-size: 1.4rem;
+  }
+  .preguntas-frecuentes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .preguntas-frecuentes .pf {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contenedor-preguntas-frecuentes h3 {
+    font-size: 1.6rem;
+  }
+  .preguntas-frecuentes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .preguntas-frecuentes .pf {
+    max-width: 500px;
+    padding: 24px;
+  }
+}
 /* servicio */
 .servicios-destacados {
   display: flex;
@@ -608,12 +723,103 @@ li {
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .galeria-trabajos {
     flex-direction: column;
   }
   .imagen-trabajos img {
     width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .galeria-trabajos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .imagen-trabajos img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .galeria-trabajos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .imagen-trabajos img {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+.contenedor-clientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+}
+.contenedor-clientes .boton-contacto {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+.contenedor-clientes .boton-contacto .btn-contacto:hover {
+  background-color: black;
+}
+
+.imagenes-clientes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1fr;
+  justify-items: center;
+  padding: 20px;
+  margin: 20px;
+  gap: 10px;
+}
+.imagenes-clientes img {
+  width: 120px;
+  height: 120px;
+  max-height: 300px;
+  object-fit: center;
+  transition: transform 0.3s ease;
+}
+.imagenes-clientes img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+  .imagenes-clientes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1fr;
+  }
+  .imagenes-clientes img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .imagenes-clientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1fr;
+  }
+  .imagenes-clientes img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .imagenes-clientes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1fr;
+  }
+  .imagenes-clientes img {
+    width: 120px;
+    height: 120px;
   }
 }
 

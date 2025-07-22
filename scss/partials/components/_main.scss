@@ -1,6 +1,6 @@
 @use "../utilities/variables";
 @use "../utilities/mixin";
-// marcas
+// marcas //
 .marcas {
   @include mixin.flex(row, center, center);
   gap: 20px;
@@ -72,8 +72,7 @@
   }
 }
 
-/* responsive */
-// moviles (hasta 480px)
+//  responsive moviles //
 @media screen and (max-width: 480px) {
   .container-main {
     .slider-container img {
@@ -82,7 +81,7 @@
   }
 }
 
-// tablets (481px a 1024px)
+// responsive tablets y escritorio //
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .container-main {
     .slider-container img {
@@ -91,7 +90,7 @@
   }
 }
 
-// escritorio (más de 1024px)
+// responsive pantallas grandes //
 @media screen and (min-width: 1025px) {
   .container-main {
     .slider-container img {
