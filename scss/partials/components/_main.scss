@@ -3,19 +3,16 @@
 @use "../utilities/extend";
 // marcas //
 .marcas {
-  // @include mixin.marcas-grid(16rem, 20px, 1200px);
-  // animation: animate 10s linear infinite;
+  @include mixin.marcas-grid(16rem, 20px, 1200px);
+  animation: animate 10s linear infinite;
   @include mixin.flex(row, center, center);
-  margin: 20px auto;
   width: 32%;
-  max-width: 1200px;
-  gap: 10px;
 }
-// @keyframes animate {
-//   to {
-//     translate: calc(-5 * 16rem);
-//   }
-// }
+@keyframes animate {
+  to {
+    transform: translateX(calc(-5 * 16rem));
+  }
+}
 .seguros {
   @include mixin.flex(row, center, center);
   margin: 20px auto;
@@ -81,11 +78,11 @@
 
 //  responsive moviles //
 @media screen and (max-width: 480px) {
-  // .marcas {
-  //   @include mixin.marcas-grid(10rem, 10px, 1000px);
-  //   animation: animate 10s linear infinite;
-  //   width: 100%;
-  // }
+  .marcas {
+    @include mixin.marcas-grid(10rem, 10px, 1000px);
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-main {
     .slider-container img {
       width: 240px;
@@ -95,11 +92,11 @@
 
 // responsive tablets y escritorio //
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  // .marcas {
-  //   @include mixin.marcas-grid(12rem, 15px, 1000px);
-  //   animation: animate 10s linear infinite;
-  //   width: 100%;
-  // }
+  .marcas {
+    @include mixin.marcas-grid(12rem, 15px, 1000px);
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-main {
     .slider-container img {
       width: 280px;

@@ -352,16 +352,24 @@ li {
   }
 }
 .marcas {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16rem;
+  gap: 20px;
+  max-width: 1200px;
+  animation: animate 10s linear infinite;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
   width: 32%;
-  max-width: 1200px;
-  gap: 10px;
 }
 
+@keyframes animate {
+  to {
+    transform: translateX(-80rem);
+  }
+}
 .seguros {
   display: flex;
   flex-direction: row;
@@ -421,11 +429,29 @@ li {
 }
 
 @media screen and (max-width: 480px) {
+  .marcas {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 10rem;
+    gap: 10px;
+    max-width: 1000px;
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-main .slider-container img {
     width: 240px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+  .marcas {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12rem;
+    gap: 15px;
+    max-width: 1000px;
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-main .slider-container img {
     width: 280px;
   }
