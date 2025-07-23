@@ -3,14 +3,15 @@
 @use "../utilities/extend";
 // marcas //
 .marcas {
-  // @include mixin.marcas-grid(16rem, 20px, 1200px);
-  // animation: animate 10s linear infinite;
   @include mixin.flex(row, center, center);
   margin: 20px auto;
   width: 32%;
   max-width: 1200px;
   gap: 10px;
 }
+// prueba de animacion //
+// @include mixin.marcas-grid(16rem, 20px, 1200px);
+// animation: animate 10s linear infinite;
 // @keyframes animate {
 //   to {
 //     translate: calc(-5 * 16rem);
@@ -81,6 +82,7 @@
 
 //  responsive moviles //
 @media screen and (max-width: 480px) {
+  // prueba de animacion //
   // .marcas {
   //   @include mixin.marcas-grid(10rem, 10px, 1000px);
   //   animation: animate 10s linear infinite;
@@ -95,6 +97,7 @@
 
 // responsive tablets y escritorio //
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+  // prueba de animacion //
   // .marcas {
   //   @include mixin.marcas-grid(12rem, 15px, 1000px);
   //   animation: animate 10s linear infinite;
