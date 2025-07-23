@@ -5,11 +5,12 @@
 .nav-bar {
   @include mixin.flex(row, space-between, center);
   padding: 10px 20px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #000000 0 5px,
-    #161a4d 5px 10px
-  );
+  // background-color: black;
+  // background: repeating-linear-gradient(
+  //   to bottom,
+  //   #000000 0 5px,
+  //   #000000 5px 10px
+  // );
   color: variables.$text-color-primary;
 
   a {
@@ -19,7 +20,7 @@
     transition: color 0.3s;
 
     &:hover {
-      color: blue;
+      color: rgb(231, 117, 25);
     }
   }
   .logo {

@@ -9,7 +9,7 @@
 /* body  */
 body {
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(8, 5, 52));
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(158, 14, 14));
   background-size: 200% 200%;
   animation: gradientAnimation 5s infinite alternate;
   color: #efe8e8;
@@ -26,7 +26,7 @@ body {
 }
 /* enlances generales  */
 a {
-  color: #0077cc;
+  color: #b56c07;
   text-decoration: none;
 }
 
@@ -86,11 +86,11 @@ li {
   padding: 20px;
   text-align: center;
   font-size: 14px;
-  color: #161a4d;
+  color: rgb(231, 207, 48);
   gap: 10px;
 }
 .container-footer a {
-  color: #007bff;
+  color: rgb(231, 207, 48);
   text-decoration: none;
 }
 .container-footer a:hover {
@@ -163,17 +163,16 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: repeating-linear-gradient(to bottom, #000000 0 5px, #161a4d 5px 10px);
-  color: white;
+  color: rgb(231, 207, 48);
 }
 .nav-bar a {
   text-decoration: none;
-  color: white;
+  color: rgb(231, 207, 48);
   font-weight: 500;
   transition: color 0.3s;
 }
 .nav-bar a:hover {
-  color: blue;
+  color: rgb(231, 117, 25);
 }
 .nav-bar .logo img {
   margin: 10px;
@@ -229,7 +228,7 @@ li {
 }
 .contenedor-clientes .boton-contacto .btn-contacto, .imagenes-clientes, .galeria-trabajos, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(25, 4, 255, 0.938);
+  box-shadow: 0 2px 4px rgba(255, 130, 4, 0.938);
   padding: 20px;
   text-align: center;
   margin: 10px 0;
@@ -391,7 +390,7 @@ li {
 .container-main h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: white;
+  color: rgb(231, 207, 48);
 }
 .container-main p {
   font-size: 1.2rem;
@@ -618,17 +617,17 @@ li {
 }
 .servicios-lista .servicio h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: rgb(231, 207, 48);
 }
 .servicios-lista .servicio p {
   font-size: 1rem;
-  color: #666;
+  color: blanchedalmond;
 }
 .servicios-lista .servicio .fas.fa-car,
 .servicios-lista .servicio .fas.fa-tools,
 .servicios-lista .servicio .fas.fa-spray-can {
   font-size: 1.5rem;
-  color: #007bff;
+  color: rgb(231, 207, 48);
   margin-bottom: 10px;
 }
 .servicios-lista .servicio ol {
