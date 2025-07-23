@@ -1,9 +1,14 @@
-// base
+// utilities (PRIMERO - son las dependencias base)
+@use "./partials/utilities/variables";
+@use "./partials/utilities/mixin";
+@use "./partials/utilities/extend";
+
+// base (SEGUNDO - estilos base que pueden usar utilities)
 @use "./partials/base/resets";
 @use "./partials/base/tipografias";
 @use "./partials/base/general";
 
-// components
+// components (ÚLTIMO - usan base y utilities)
 // pag index//
 @use "./partials/components/footer";
 @use "./partials/components/header";
