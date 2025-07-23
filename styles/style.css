@@ -86,7 +86,7 @@ li {
   padding: 20px;
   text-align: center;
   font-size: 14px;
-  color: rgb(11, 48, 66);
+  color: #161a4d;
   gap: 10px;
 }
 .container-footer a {
@@ -228,7 +228,6 @@ li {
   }
 }
 .contenedor-clientes .boton-contacto .btn-contacto, .imagenes-clientes, .galeria-trabajos, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
-  background-color: rgb(11, 48, 66);
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(25, 4, 255, 0.938);
   padding: 20px;
@@ -357,10 +356,10 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   margin: 20px auto;
   width: 32%;
   max-width: 1200px;
+  gap: 10px;
 }
 
 .seguros {
@@ -392,7 +391,7 @@ li {
 .container-main h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #000000;
+  color: white;
 }
 .container-main p {
   font-size: 1.2rem;
@@ -401,7 +400,7 @@ li {
 .container-main .slider {
   max-width: 100%;
   padding: 40px 20px;
-  background-color: rgb(11, 48, 66);
+  background-color: #000000;
   text-align: center;
 }
 .container-main .slider .slider-container {
@@ -415,7 +414,6 @@ li {
   width: 300px;
   height: auto;
   border-radius: 12px;
-  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 .container-main .slider .slider-container img:hover {
@@ -430,11 +428,6 @@ li {
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .container-main .slider-container img {
     width: 280px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .container-main .slider-container img {
-    width: 300px;
   }
 }
 .donde-encontrarnos {
@@ -757,8 +750,8 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
-  max-width: 1200px;
 }
 .contenedor-clientes .boton-contacto {
   display: flex;
@@ -821,6 +814,20 @@ li {
     width: 120px;
     height: 120px;
   }
+}
+.container-main {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.btn-primary {
+  background-color: #000000;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #161a4d;
 }
 
 /*# sourceMappingURL=style.css.map */

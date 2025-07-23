@@ -1,0 +1,16 @@
+@use "../utilities/variables";
+
+.container-main {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.btn-primary {
+  background-color: variables.$background-color-primary;
+  border: none;
+  &:hover {
+    background-color: variables.$background-color-secondary;
+  }
+}
