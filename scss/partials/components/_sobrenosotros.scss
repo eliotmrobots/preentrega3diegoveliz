@@ -1,0 +1,63 @@
+@use "../utilities/variables";
+@use "../utilities/mixin";
+@use "../utilities/extend";
+
+.main-sobrenosotros {
+  //   text-align: center;
+  @include mixin.flex(column, center, center);
+  @extend %card;
+  padding: 20px;
+  h1 {
+    font-size: 2.5rem;
+    color: variables.$text-color-primary;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.2rem;
+    color: variables.$text-color-secondary;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+.imagen-sobrenosotros {
+  width: 20%;
+  gap: 20px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px #356ecb;
+  overflow: hidden;
+}
+// posible cambio
+// .container {
+//   @include mixin.grid(3, 1fr);
+//   //   display: grid;
+//   //   grid-template-columns: repeat(3, 1fr);
+//   gap: 16px;
+// }
+
+// .image-item {
+//   @extend %card;
+//   display: flex;
+//   flex-direction: column;
+//   border-radius: 8px;
+//   padding: 8px;
+// }
+
+// .image-item img {
+//   width: 100%;
+//   height: auto;
+//   border-radius: 8px;
+//   margin-bottom: 8px;
+// }
+
+// .image-item p {
+//   padding: 12px;
+//   background-color: rgba(71, 17, 205, 0.8);
+//   border-radius: 8px;
+//   margin: 0;
+//   font-size: 14px;
+//   line-height: 1.4;
+//   padding: 50px;
+// }

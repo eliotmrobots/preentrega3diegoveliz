@@ -17,31 +17,8 @@
     }
 
     p {
-      font-size: 20px;
-      font-weight: 300;
-    }
-  }
-}
-
-.contenedor-sobrenosotros {
-  @include mixin.flex(column, center, center);
-  padding: 10px;
-
-  .hero-sobrenosotros {
-    @extend %hero;
-    img {
-      @extend %hero-img;
-    }
-  }
-  .hero-texto-sobrenosotros {
-    @extend %hero-texto;
-
-    h1 {
-      font-size: 38px;
-    }
-
-    p {
       font-size: 15px;
+      font-weight: 300;
     }
   }
 }
@@ -55,27 +32,14 @@
         font-size: 24px;
       }
       p {
-        font-size: 12px;
-      }
-    }
-  }
-  .contenedor-sobrenosotros {
-    padding: 2px;
-    .hero-sobrenosotros {
-      height: 50vh;
-      .hero-texto-sobrenosotros {
-        h1 {
-          font-size: 16px;
-        }
-        p {
-          font-size: 8px;
-        }
+        font-size: 14px;
       }
     }
   }
 }
+
 // responsive tablets y escritorio //
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: 781px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
     .hero-texto {
@@ -87,45 +51,18 @@
       }
     }
   }
-  .contenedor-sobrenosotros {
-    padding: 6px;
-    .hero-sobrenosotros {
-      height: 65vh;
-      .hero-texto-sobrenosotros {
-        h1 {
-          font-size: 28px;
-        }
-        p {
-          font-size: 12px;
-        }
-      }
-    }
-  }
 }
+
 // responsive pantallas grandes //
 @media screen and (min-width: 1025px) {
   .hero {
     height: 80vh;
     .hero-texto {
       h1 {
-        font-size: 48px;
+        font-size: 40px;
       }
       p {
         font-size: 20px;
-      }
-    }
-  }
-  .contenedor-sobrenosotros {
-    padding: 10px;
-    .hero-sobrenosotros {
-      height: 80vh;
-      .hero-texto-sobrenosotros {
-        h1 {
-          font-size: 38px;
-        }
-        p {
-          font-size: 15px;
-        }
       }
     }
   }

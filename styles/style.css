@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.imagenes-clientes, .galeria-trabajos, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
+.imagenes-clientes, .galeria-trabajos, .main-sobrenosotros, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(25, 4, 255, 0.938);
   padding: 20px;
@@ -7,14 +7,14 @@
   margin: 10px 0;
 }
 
-.hero, .contenedor-sobrenosotros .hero-sobrenosotros {
+.hero {
   position: relative;
   width: 100%;
   height: 80vh;
   overflow: hidden;
 }
 
-.hero img, .contenedor-sobrenosotros .hero-sobrenosotros img {
+.hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -22,7 +22,7 @@
   filter: brightness(70%);
 }
 
-.hero .hero-texto, .contenedor-sobrenosotros .hero-texto-sobrenosotros {
+.hero .hero-texto {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -263,22 +263,8 @@ img {
   font-weight: 600;
 }
 .hero .hero-texto p {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.contenedor-sobrenosotros {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-.contenedor-sobrenosotros .hero-texto-sobrenosotros h1 {
-  font-size: 38px;
-}
-.contenedor-sobrenosotros .hero-texto-sobrenosotros p {
   font-size: 15px;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 480px) {
@@ -289,22 +275,10 @@ img {
     font-size: 24px;
   }
   .hero .hero-texto p {
-    font-size: 12px;
-  }
-  .contenedor-sobrenosotros {
-    padding: 2px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros {
-    height: 50vh;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros h1 {
-    font-size: 16px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros p {
-    font-size: 8px;
+    font-size: 14px;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: 781px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
   }
@@ -314,40 +288,16 @@ img {
   .hero .hero-texto p {
     font-size: 18px;
   }
-  .contenedor-sobrenosotros {
-    padding: 6px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros {
-    height: 65vh;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros h1 {
-    font-size: 28px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros p {
-    font-size: 12px;
-  }
 }
 @media screen and (min-width: 1025px) {
   .hero {
     height: 80vh;
   }
   .hero .hero-texto h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
   .hero .hero-texto p {
     font-size: 20px;
-  }
-  .contenedor-sobrenosotros {
-    padding: 10px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros {
-    height: 80vh;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros h1 {
-    font-size: 38px;
-  }
-  .contenedor-sobrenosotros .hero-sobrenosotros .hero-texto-sobrenosotros p {
-    font-size: 15px;
   }
 }
 .marcas {
@@ -678,6 +628,36 @@ img {
     width: 30%;
   }
 }
+.main-sobrenosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.main-sobrenosotros h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.main-sobrenosotros p {
+  font-size: 1.2rem;
+  color: gray;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.imagen-sobrenosotros {
+  width: 20%;
+  gap: 20px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px #356ecb;
+  overflow: hidden;
+}
+
 .contenedor-trabajos {
   padding: 20px;
   text-align: center;
