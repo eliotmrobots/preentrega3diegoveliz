@@ -60,12 +60,30 @@
   .servicios-lista {
     @include mixin.flex(column, center, center);
     gap: 16px;
-  }
+    h3 {
+      font-size: 0.5rem;
+    }
 
-  .servicio {
-    width: 100%;
-    font-size: 1rem;
-    padding: 16px;
+    .servicio {
+      width: 100%;
+      h4 {
+        font-size: 1.2rem;
+        color: variables.$background-color-primary;
+      }
+      p {
+        font-size: 0.8rem;
+        color: #666;
+      }
+
+      .fas.fa-car,
+      .fas.fa-tools,
+      .fas.fa-spray-can {
+        font-size: 1.5rem;
+      }
+      ol li {
+        font-size: 0.9rem;
+      }
+    }
   }
 }
 // responsive tablet y escritorio//
@@ -76,6 +94,19 @@
 
     .servicio {
       width: 80%;
+      .fas.fa-car .fas.fa-tools,
+      .fas.fa-spray-can {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      ol li {
+        font-size: 1.1rem;
+      }
     }
   }
 }
