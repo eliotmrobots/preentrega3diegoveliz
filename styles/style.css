@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.imagenes-clientes, .galeria-trabajos, .main-sobrenosotros, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto {
+.imagenes-clientes, .galeria-trabajos, .main-sobrenosotros, .servicios-lista .servicio, .preguntas-frecuentes .pf, .donde-encontrarnos, .boton-contacto .btn-contacto, .contenedor-galeria {
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(25, 4, 255, 0.938);
   padding: 20px;
@@ -331,42 +331,42 @@ img {
 }
 
 /*main */
-.container-main {
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1fr 20px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-  /* slider foto de trabajos realizados */
 }
-.container-main h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;
-}
-.container-main p {
-  font-size: 1.2rem;
-  color: #666;
-}
-.container-main .slider {
-  max-width: 100%;
-  padding: 40px 20px;
-  background-color: #000000;
-  text-align: center;
-}
-.container-main .slider .slider-container {
+
+.imagen-galeria {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 0;
+  flex-direction: column;
+  background-color: rgb(13, 5, 43);
+  border-radius: 8px;
+  padding: 8px;
 }
-.container-main .slider .slider-container img {
-  width: 300px;
+
+.imagen-galeria img {
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  border-radius: 100%;
 }
-.container-main .slider .slider-container img:hover {
-  transform: scale(1.05);
+
+.imagen-galeria p {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+.video-trabajos {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(13, 5, 43);
+  border-radius: 8px;
+  padding: 8px;
 }
 
 @media screen and (max-width: 480px) {

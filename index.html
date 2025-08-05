@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Tipografía desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Estilos CSS  -->
+    <!-- Animaciones con Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Íconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -48,11 +49,20 @@
     </header>
     <main>
         <!-- Hero section con imagen y texto -->
-        <section class=" hero ">
-            <img src="./assets/imagenes/silueta.1.jpg" alt="Auto Niobio - imagen principal">
-            <div class="hero-texto">
+        <section class="hero">
+            <img src="./assets/imagenes/silueta.1.jpg" alt="Auto Niobio - imagen principal"
+                class="hero-auto animate__animated animate__slideInRight" loading="eager" decoding="sync">
+            <!-- <div class="hero-texto">
                 <h1>Bienvenido a NIOBIO</h1>
                 <p>Cuidado automotriz con pasión, precisión y estilo</p>
+            </div> -->
+            <div class="hero-texto animate__animated animate__fadeInUp">
+                <h1 class="animate__animated animate__fadeInUp animate__delay-1s">
+                    Bienvenido a NIOBIO
+                </h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-2s">
+                    Cuidado automotriz con pasión, precisión y estilo
+                </p>
             </div>
         </section>
         <!-- Marcas destacadas -->
@@ -65,37 +75,66 @@
 
 
         <!-- contenedor principal -->
-        <section class="container-main">
-            <p>En NIOBIO, nos dedicamos a ofrecer productos y servicios de alta calidad para mejorar el cuidado de tu
-                automóvil. Trabajamos con las mejores marcas y con tecnología de última generación.
-                <br><br>
-                Nuestro equipo está conformado por profesionales apasionados por el mundo automotriz, listos para
-                asesorarte y brindarte soluciones personalizadas. Ofrecemos desde mantenimiento preventivo hasta
-                servicios de detailing y venta de accesorios exclusivos.
-                <br><br>
-                Confía en nosotros para mantener tu vehículo en óptimas condiciones y disfrutar de una experiencia única
-                en cada visita. ¡Tu auto merece lo mejor y en NIOBIO lo encontrará!
-            </p>
-            <br>
-            <p>
-                <strong>Compromiso con el medio ambiente:</strong><br>
-                Sin alterar el medio ambiente: no utilizamos químicos, gases, líquidos inflamables o corrosivos,<br> ni
-                contaminantes de atmósfera o productos tóxicos.
-            </p>
-            <!-- Slider de imágenes de trabajos -->
-            <section class="slider">
-                <h3>Galería de trabajos</h3>
-                <div class="slider-container">
+
+        <!-- Slider de imágenes de trabajos -->
+        <!-- <div>
+            <h3>Galería de trabajos</h3>
+        </div> -->
+
+        <section class="contenedor-trabajos">
+            <div class="imagen-trabajos">
+                <img src="./assets/imagenes/pintura1.webp" alt="Trabajo 1">
+                <p>En NIOBIO, nos dedicamos a ofrecer productos y servicios de alta calidad para mejorar el cuidado
+                    de tu
+                    automóvil. Trabajamos con las mejores marcas y con tecnología de última generación.
+                </p>
+            </div>
+            <div class="imagen-trabajos">
+                <img src="./assets/imagenes/taller.jpg" alt="Trabajo 2">
+
+                <p>
+                    Nuestro equipo está conformado por profesionales apasionados por el mundo automotriz, listos
+                    para
+                    asesorarte y brindarte soluciones personalizadas. Ofrecemos desde mantenimiento preventivo hasta
+                    servicios de detailing y venta de accesorios exclusivos.
+                </p>
+            </div>
+            <div class="imagen-trabajos">
+                <img src="./assets/imagenes/pintura4.webp" alt="Trabajo 3">
+
+                <p> Confía en nosotros para mantener tu vehículo en óptimas condiciones y disfrutar de una
+                    experiencia única
+                    en cada visita. ¡Tu auto merece lo mejor y en NIOBIO lo encontrará!
+                </p>
+                <p>
+                    <strong>Compromiso con el medio ambiente:</strong><br>
+                    Sin alterar el medio ambiente: no utilizamos químicos, gases, líquidos inflamables o
+                    corrosivos,<br> ni
+                    contaminantes de atmósfera o productos tóxicos.
+                </p>
+            </div>
+            <div class="video-trabajos">
+                <video controls>
+                    <source src="./assets/imagenes/VID-20250803-WA0001.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <p>En NIOBIO, la calidad y la satisfacción del cliente son nuestra prioridad. ¡Contáctanos hoy mismo
+                    para
+                    conocer más sobre nuestros servicios y cómo podemos ayudarte a cuidar tu vehículo!</p>
+
+            </div>
+
+            <!-- <div class="slider-container">
                     <img src="./assets/imagenes/auto2.webp" alt="Trabajo 1">
                     <img src="./assets/imagenes/auto1.jpg" alt="Trabajo 2">
                     <img src="./assets/imagenes/sacabollos-08-10.png" alt="Trabajo 3">
                     <img src="./assets/imagenes/OIP.webp" alt="Trabajo 4">
                     <img src="./assets/imagenes/taller.jpg" alt="Trabajo 5">
-                </div>
-            </section>
-
-
+                </div>  -->
         </section>
+
+
+
         <!-- Sección de servicios destacados -->
         <section class="servicios-destacados">
             <h3>Servicios Destacados</h3>
