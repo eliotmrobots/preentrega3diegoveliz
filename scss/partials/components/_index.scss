@@ -36,7 +36,7 @@
 }
 
 /*main */
-.container-main {
+.container-principal {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -51,31 +51,24 @@
     font-size: 1.2rem;
     color: #666;
   }
+}
+.slider {
+  max-width: 100%;
+  padding: 40px 20px;
+  background-color: variables.$background-color-primary;
+  text-align: center;
 
-  /* slider foto de trabajos realizados */
-  .slider {
-    max-width: 100%;
-    padding: 40px 20px;
-    background-color: variables.$background-color-primary;
-    text-align: center;
+  .slider-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
 
-    .slider-container {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 20px 0;
-
-      img {
-        width: 300px;
-        height: auto;
-        border-radius: 12px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
     }
   }
 }
@@ -88,9 +81,9 @@
   //   animation: animate 10s linear infinite;
   //   width: 100%;
   // }
-  .container-main {
+  .container-principal {
     p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
     .slider {
       width: 90%;
@@ -128,7 +121,7 @@
   //   animation: animate 10s linear infinite;
   //   width: 100%;
   // }
-  .container-main {
+  .container-principal {
     margin: 20px;
     padding: 0 10px;
     p {

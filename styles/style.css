@@ -331,85 +331,81 @@ img {
 }
 
 /*main */
-.container-main {
+.container-principal {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-  /* slider foto de trabajos realizados */
 }
-.container-main h2 {
+.container-principal h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
 }
-.container-main p {
+.container-principal p {
   font-size: 1.2rem;
   color: #666;
 }
-.container-main .slider {
+
+.slider {
   max-width: 100%;
   padding: 40px 20px;
   background-color: #000000;
   text-align: center;
 }
-.container-main .slider .slider-container {
+.slider .slider-container {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 0;
 }
-.container-main .slider .slider-container img {
+.slider .slider-container img {
   width: 300px;
   height: auto;
   border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-.container-main .slider .slider-container img:hover {
-  transform: scale(1.05);
 }
 
 @media screen and (max-width: 480px) {
-  .container-main p {
-    font-size: 0.7rem;
+  .container-principal p {
+    font-size: 0.8rem;
   }
-  .container-main .slider {
+  .container-principal .slider {
     width: 90%;
     margin: 0 auto;
   }
-  .container-main .slider h3 {
+  .container-principal .slider h3 {
     font-size: 1rem;
   }
-  .container-main .slider-container {
+  .container-principal .slider-container {
     display: flex;
     gap: 10px;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 0;
   }
-  .container-main .slider-container img {
+  .container-principal .slider-container img {
     width: 100px;
     height: auto;
     border-radius: 12px;
     transition: transform 0.3s ease;
   }
-  .container-main .slider-container img:hover {
+  .container-principal .slider-container img:hover {
     transform: scale(1.05);
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  .container-main {
+  .container-principal {
     margin: 20px;
     padding: 0 10px;
   }
-  .container-main p {
+  .container-principal p {
     font-size: 0.9rem;
   }
-  .container-main .slider {
+  .container-principal .slider {
     width: 60%;
     margin: 0 auto;
   }
-  .container-main .slider h3 {
+  .container-principal .slider h3 {
     font-size: 1.2rem;
   }
   .slider-container {
@@ -743,7 +739,7 @@ img {
     font-size: 1rem;
   }
   .main-sobrenosotros p {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0 20px;
   }
   .imagen-sobrenosotros {
