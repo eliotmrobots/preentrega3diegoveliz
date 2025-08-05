@@ -29,25 +29,25 @@
     height: 50vh;
     .hero-texto {
       h1 {
-        font-size: 24px;
+        font-size: 22px;
       }
       p {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
 }
 
-// // responsive tablets y escritorio //
+// responsive tablets y escritorio //
 @media screen and (min-width: 781px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
     .hero-texto {
       h1 {
-        font-size: 40px;
+        font-size: 34px;
       }
       p {
-        font-size: 18px;
+        font-size: 12px;
       }
     }
   }

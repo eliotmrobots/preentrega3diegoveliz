@@ -1,78 +1,94 @@
 @use "../utilities/variables";
 @use "../utilities/mixin";
 
-// Header //
-.nav-bar {
+// Navbar con Bootstrap personalizado
+.navbar {
   @include mixin.flex(row, space-between, center);
   padding: 10px 20px;
   background: repeating-linear-gradient(
     to bottom,
     #000000 0 5px,
     #161a4d 5px 10px
-  );
-  color: variables.$text-color-primary;
+  ) !important; // !important para sobrescribir Bootstrap
 
-  a {
-    text-decoration: none;
-    color: variables.$text-color-primary;
-    font-weight: 500;
-    transition: color 0.3s;
-
-    &:hover {
-      color: blue;
-    }
-  }
-  .logo {
-    img {
-      margin: 10px;
-      height: 150px;
+  // Logo en navbar
+  .navbar-brand {
+    .logo {
+      margin: 15px;
+      height: 150px; // Ajusta según necesites
       border-radius: 50%;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
-  .nav-links {
-    list-style: none;
-    display: flex;
+  // Contenedor del botón hamburger
+  .navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+  }
+
+  // Links de navegación
+  .navbar-nav {
+    @include mixin.flex(row, flex-end, center);
     gap: 20px;
-  }
-}
+    margin-left: auto;
+    .nav-link {
+      color: variables.$text-color-primary !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      text-decoration: none;
 
-// Responsive movil //
-@media screen and (max-width: 480px) {
-  .nav-bar {
-    @include mixin.flex(column, center, center);
-    padding: 10px;
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
+      &:hover {
+        color: #4a90e2 !important;
+        transform: translateY(-1px);
+      }
     }
   }
 }
 
-// Responsive tablet y escritorio //
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  .nav-bar {
-    @include mixin.flex(column, space-between, center);
-    padding: 10px 15px;
+// Responsive para móvil
+@media screen and (max-width: 576px) {
+  .navbar {
+    padding: 8px 15px;
 
-    .nav-links {
-      gap: 15px;
+    .navbar-brand {
+      .logo {
+        height: 55px;
+      }
+    }
+    // En móvil, el menú se despliega verticalmente
+    .navbar-collapse {
+      .navbar-nav {
+        @include mixin.flex(column, center, flex-start);
+        margin-top: 15px;
+        gap: 10px;
+        text-align: center;
+
+        .nav-link {
+          padding: 10px 0;
+          width: 100%;
+        }
+      }
     }
   }
 }
 
-// Responsive pantallas grandes //
-@media screen and (min-width: 1025px) {
-  .nav-bar {
-    @include mixin.flex(row, space-between, center);
-    padding: 10px 20px;
-
-    .nav-links {
-      gap: 20px;
+// Responsive para tablet
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .navbar {
+    .navbar-brand {
+      .logo {
+        display: flex;
+        height: 60px;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        gap: 15px; // Menos espacio en tablet
+      }
     }
   }
 }
