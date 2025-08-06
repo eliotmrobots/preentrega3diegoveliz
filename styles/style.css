@@ -70,7 +70,7 @@ body {
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(8, 5, 52));
   background-size: 200% 200%;
   animation: gradientAnimation 5s infinite alternate;
-  color: #efe8e8;
+  color: #4e10c1;
   line-height: 1.6;
 }
 
@@ -118,11 +118,11 @@ img {
   padding: 20px;
   text-align: center;
   font-size: 14px;
-  color: #161a4d;
-  gap: 10px;
+  color: white;
+  gap: 20px;
 }
 .container-footer a {
-  color: #007bff;
+  color: #d7e1eb;
   text-decoration: none;
 }
 .container-footer a:hover {
@@ -142,15 +142,36 @@ img {
 .footer a:hover {
   text-decoration: underline;
 }
-.footer .footer-links {
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  gap: 15px;
 }
-.footer .footer-links a {
+.footer-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
   margin: 0 10px;
   font-weight: 600;
 }
-.footer .footer-text {
+.footer-links a:hover {
+  background-color: #3498db;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.4);
+}
+
+.footer-text {
   font-size: 14px;
   margin-top: 10px;
 }
@@ -164,6 +185,16 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+  }
+  .footer .footer-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .footer .footer-links a:hover {
+    background-color: #3498db;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.4);
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
@@ -305,12 +336,23 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16rem;
+  gap: 20px;
+  max-width: 1200px;
   margin: 20px auto;
   width: 32%;
   max-width: 1200px;
   gap: 10px;
+  animation: animate 10s linear infinite;
 }
 
+@keyframes animate {
+  to {
+    translate: -80rem;
+  }
+}
 .seguros {
   display: flex;
   flex-direction: row;
@@ -331,73 +373,72 @@ img {
 }
 
 /*main */
-.container-main {
+.container-principal {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-  /* slider foto de trabajos realizados */
 }
-.container-main h2 {
+.container-principal h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
 }
-.container-main p {
+.container-principal p {
   font-size: 1.2rem;
   color: #666;
 }
-.container-main .slider {
-  max-width: 100%;
-  padding: 40px 20px;
-  background-color: #000000;
-  text-align: center;
-}
-.container-main .slider .slider-container {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 0;
-}
-.container-main .slider .slider-container img {
-  width: 300px;
-  height: auto;
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  overflow: hidden;
 }
-.container-main .slider .slider-container img:hover {
-  transform: scale(1.05);
+.swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 480px) {
+  .marcas {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 10rem;
+    gap: 10px;
+    max-width: 1000px;
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-principal p {
     font-size: 0.8rem;
   }
-  .container-principal .slider {
-    width: 90%;
-    margin: 0 auto;
+  .container-principal .swiper {
+    width: 100%;
+    height: 230px;
   }
-  .container-principal .slider h3 {
-    font-size: 1rem;
-  }
-  .container-principal .slider-container {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-  }
-  .container-principal .slider-container img {
-    width: 100px;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-  }
-  .container-principal .slider-container img:hover {
-    transform: scale(1.05);
+  .container-principal .swiper .swiper-slide img {
+    object-fit: cover;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+  .marcas {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12rem;
+    gap: 15px;
+    max-width: 1000px;
+    animation: animate 10s linear infinite;
+    width: 100%;
+  }
   .container-principal {
     margin: 20px;
     padding: 0 10px;
@@ -405,28 +446,12 @@ img {
   .container-principal p {
     font-size: 0.9rem;
   }
-  .container-principal .slider {
-    width: 60%;
-    margin: 0 auto;
+  .swiper {
+    width: 80%;
+    height: 300px;
   }
-  .container-principal .slider h3 {
-    font-size: 1.2rem;
-  }
-  .slider-container {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-  }
-  .slider-container img {
-    width: 200px;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-  }
-  .slider-container img:hover {
-    transform: scale(1.05);
+  .swiper .swiper-slide img {
+    object-fit: cover;
   }
 }
 .donde-encontrarnos {
@@ -656,7 +681,7 @@ img {
   }
   .servicios-lista .servicio h4 {
     font-size: 1.2rem;
-    color: #000000;
+    color: white;
   }
   .servicios-lista .servicio p {
     font-size: 0.8rem;
