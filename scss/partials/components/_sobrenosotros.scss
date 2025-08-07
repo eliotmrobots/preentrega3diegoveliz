@@ -3,7 +3,6 @@
 @use "../utilities/extend";
 
 .main-sobrenosotros {
-  //   text-align: center;
   @include mixin.flex(column, center, center);
   @extend %card;
   padding: 20px;
