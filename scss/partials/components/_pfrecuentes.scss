@@ -37,7 +37,7 @@
       font-weight: bold;
     }
     p {
-      color: #444;
+      color: variables.$text-color-secondary;
       margin: 8px 0 0 0;
     }
   }
@@ -68,7 +68,7 @@
   }
 
   .preguntas-frecuentes {
-    @include mixin.grid(2, 30px);
+    @include mixin.grid(3, 30px);
 
     .pf {
       max-width: 100%;

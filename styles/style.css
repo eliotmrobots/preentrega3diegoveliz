@@ -64,13 +64,19 @@ li {
   color: #1a1a1a;
 }
 
+/* Fix para compatibilidad de text-size-adjust */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* body  */
 body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(8, 5, 52));
   background-size: 200% 200%;
   animation: gradientAnimation 5s infinite alternate;
-  color: #4e10c1;
+  color: white;
   line-height: 1.6;
 }
 
@@ -113,6 +119,61 @@ img {
   display: block;
 }
 
+th {
+  text-align: -webkit-match-parent;
+  text-align: match-parent;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+  color: white;
+}
+.whatsapp-float i {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
 .container-footer {
   background-color: #000000;
   padding: 20px;
@@ -228,8 +289,8 @@ img {
   background: repeating-linear-gradient(to bottom, #000000 0 5px, #161a4d 5px 10px) !important;
 }
 .navbar .navbar-brand .logo {
-  margin: 15px;
-  height: 150px;
+  margin: 20px;
+  height: 125px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -264,7 +325,7 @@ img {
     padding: 8px 15px;
   }
   .navbar .navbar-brand .logo {
-    height: 55px;
+    height: 80px;
   }
   .navbar .navbar-collapse .navbar-nav {
     display: flex;
@@ -303,13 +364,13 @@ img {
     height: 50vh;
   }
   .hero .hero-texto h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .hero .hero-texto p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
-@media screen and (min-width: 781px) and (max-width: 1024px) {
+@media screen and (min-width: 481px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
   }
@@ -336,23 +397,12 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 16rem;
-  gap: 20px;
-  max-width: 1200px;
   margin: 20px auto;
   width: 32%;
   max-width: 1200px;
   gap: 10px;
-  animation: animate 10s linear infinite;
 }
 
-@keyframes animate {
-  to {
-    translate: -80rem;
-  }
-}
 .seguros {
   display: flex;
   flex-direction: row;
@@ -385,7 +435,7 @@ img {
 }
 .container-principal p {
   font-size: 1.2rem;
-  color: #666;
+  color: white;
 }
 
 .swiper {
@@ -401,7 +451,7 @@ img {
   justify-content: center;
 }
 .swiper .swiper-slide img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -410,13 +460,12 @@ img {
 
 @media screen and (max-width: 480px) {
   .marcas {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 10rem;
-    gap: 10px;
-    max-width: 1000px;
-    animation: animate 10s linear infinite;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 31%;
   }
   .container-principal p {
     font-size: 0.8rem;
@@ -431,13 +480,12 @@ img {
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .marcas {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 12rem;
-    gap: 15px;
-    max-width: 1000px;
-    animation: animate 10s linear infinite;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 30%;
   }
   .container-principal {
     margin: 20px;
@@ -564,7 +612,7 @@ img {
   font-weight: bold;
 }
 .preguntas-frecuentes details p {
-  color: #444;
+  color: gray;
   margin: 8px 0 0 0;
 }
 
@@ -588,7 +636,7 @@ img {
   }
   .preguntas-frecuentes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
   .preguntas-frecuentes .pf {
@@ -629,7 +677,7 @@ img {
 }
 .servicios-lista h3 {
   font-size: 1.8rem;
-  color: #000000;
+  color: white;
   margin-bottom: 20px;
 }
 .servicios-lista .servicio {
@@ -646,7 +694,7 @@ img {
 }
 .servicios-lista .servicio p {
   font-size: 1rem;
-  color: #666;
+  color: white;
 }
 .servicios-lista .servicio .fas.fa-car,
 .servicios-lista .servicio .fas.fa-tools,
@@ -662,7 +710,7 @@ img {
 .servicios-lista .servicio ol li {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #555;
+  color: #dccaca;
 }
 
 @media screen and (max-width: 480px) {
@@ -685,7 +733,7 @@ img {
   }
   .servicios-lista .servicio p {
     font-size: 0.8rem;
-    color: #666;
+    color: white;
   }
   .servicios-lista .servicio .fas.fa-car,
   .servicios-lista .servicio .fas.fa-tools,
@@ -716,6 +764,7 @@ img {
   }
   .servicios-lista .servicio p {
     font-size: 1.1rem;
+    color: white;
   }
   .servicios-lista .servicio ol li {
     font-size: 1.1rem;
@@ -842,7 +891,7 @@ img {
     font-size: 0.9rem;
   }
   .imagen-trabajos img {
-    width: 100%;
+    width: 80%;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {
@@ -887,6 +936,11 @@ img {
   align-items: center;
   padding: 20px;
 }
+.contenedor-clientes h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
 
 .imagenes-clientes {
   display: grid;
@@ -915,8 +969,8 @@ img {
     gap: 1fr;
   }
   .imagenes-clientes img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 80px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px) {

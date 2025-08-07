@@ -4,19 +4,12 @@
 // marcas //
 .marcas {
   @include mixin.flex(row, center, center);
-  @include mixin.marcas-grid(16rem, 20px, 1200px);
   margin: 20px auto;
   width: 32%;
   max-width: 1200px;
   gap: 10px;
-  animation: animate 10s linear infinite;
 }
 
-@keyframes animate {
-  to {
-    translate: calc(-5 * 16rem);
-  }
-}
 .seguros {
   @include mixin.flex(row, center, center);
   margin: 20px auto;
@@ -49,7 +42,7 @@
 
   p {
     font-size: 1.2rem;
-    color: #666;
+    color: variables.$text-color-primary;
   }
 }
 .swiper {
@@ -65,7 +58,7 @@
     justify-content: center;
 
     img {
-      width: 100%;
+      width: 80%;
       height: 100%;
       object-fit: cover;
       object-position: center;
@@ -73,35 +66,15 @@
     }
   }
 }
-// .slider {
-//   max-width: 100%;
-//   padding: 40px 20px;
-//   background-color: variables.$background-color-primary;
-//   text-align: center;
-
-//   .slider-container {
-//     display: flex;
-//     gap: 20px;
-//     overflow-x: auto;
-//     scroll-behavior: smooth;
-//     padding: 20px 0;
-
-//     img {
-//       width: 300px;
-//       height: auto;
-//       border-radius: 12px;
-//     }
-//   }
-// }
 
 //  responsive moviles //
 @media screen and (max-width: 480px) {
-  // prueba de animacion //
   .marcas {
-    @include mixin.marcas-grid(10rem, 10px, 1000px);
-    animation: animate 10s linear infinite;
-    width: 100%;
+    @include mixin.flex(row, center, center);
+    margin: 20px auto;
+    width: 31%;
   }
+
   .container-principal {
     p {
       font-size: 0.8rem;
@@ -115,35 +88,17 @@
         object-fit: cover;
       }
     }
-    // .slider-container {
-    //   display: flex;
-    //   gap: 10px;
-    //   overflow-x: auto;
-    //   scroll-behavior: smooth;
-    //   padding: 10px 0;
-
-    //   img {
-    //     width: 100px;
-    //     height: auto;
-    //     border-radius: 12px;
-    //     transition: transform 0.3s ease;
-
-    //     &:hover {
-    //       transform: scale(1.05);
-    //     }
-    //   }
-    // }
   }
 }
 
 // responsive tablets y escritorio //
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  // prueba de animacion //
   .marcas {
-    @include mixin.marcas-grid(12rem, 15px, 1000px);
-    animation: animate 10s linear infinite;
-    width: 100%;
+    @include mixin.flex(row, center, center);
+    margin: 20px auto;
+    width: 30%;
   }
+
   .container-principal {
     margin: 20px;
     padding: 0 10px;

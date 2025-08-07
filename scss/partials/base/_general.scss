@@ -1,10 +1,19 @@
+@use "../utilities/variables";
+
+/* Fix para compatibilidad de text-size-adjust */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* body  */
+
 body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(8, 5, 52));
   background-size: 200% 200%;
   animation: gradientAnimation 5s infinite alternate;
-  color: #4e10c1;
+  color: variables.$text-color-primary;
   line-height: 1.6;
 }
 @keyframes gradientAnimation {
@@ -41,4 +50,61 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+th {
+  text-align: -webkit-match-parent;
+  text-align: match-parent;
+}
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  &:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+    color: white;
+  }
+
+  i {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 15px;
+    right: 15px;
+  }
 }

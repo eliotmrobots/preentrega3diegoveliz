@@ -15,7 +15,7 @@
 
   h3 {
     font-size: 1.8rem;
-    color: variables.$background-color-primary;
+    color: variables.$text-color-primary;
     margin-bottom: 20px;
   }
 
@@ -32,7 +32,7 @@
 
     p {
       font-size: 1rem;
-      color: #666;
+      color: variables.$text-color-primary;
     }
 
     .fas.fa-car,
@@ -49,7 +49,7 @@
       li {
         margin-bottom: 10px;
         font-size: 1rem;
-        color: #555;
+        color: #dccaca;
       }
     }
   }
@@ -72,7 +72,7 @@
       }
       p {
         font-size: 0.8rem;
-        color: #666;
+        color: variables.$text-color-primary;
       }
 
       .fas.fa-car,
@@ -103,6 +103,7 @@
       }
       p {
         font-size: 1.1rem;
+        color: variables.$text-color-primary;
       }
       ol li {
         font-size: 1.1rem;

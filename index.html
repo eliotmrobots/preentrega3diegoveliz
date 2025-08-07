@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="NIOBIO - Taller automotriz especializado en sacabollos, pintura y detailing en Zárate. Servicio profesional con garantía para el cuidado de tu vehículo.">
+    <meta name="keywords"
+        content="taller automotriz, sacabollos, pintura automotriz, detailing, Zárate, reparación abolladuras, granizo">
+    <meta name="author" content="NIOBIO">
+    <meta name="robots" content="index, follow">
     <!-- Tipografía desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <!-- swiperslider -->
@@ -34,7 +41,8 @@
                 <img src="./assets/imagenes/logo5.png" alt="Logo de NIOBIO" class="logo">
             </a>
             <!-- Botón de menú para pantallas pequeñas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-item">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-item"
+                aria-label="Abrir menú de navegación" title="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nav-item">
@@ -77,22 +85,9 @@
         </section>
         <!-- Marcas destacadas -->
         <div class="marcas">
-            <img src="./assets/imagenes/marcas1.jpg" alt="marcas1">
-            <img src="./assets/imagenes/marcas2.jpg" alt="marcas2">
-            <img src="./assets/imagenes/marcas3.jpg" alt="marcas3">
-            <img src="./assets/imagenes/seguros1.png" alt="marcas4">
-            <img src="./assets/imagenes/seguros2.png" alt="marcas5">
-            <img src="./assets/imagenes/seguros4.png" alt="marcas6">
-            <img src="./assets/imagenes/marcas1.jpg" alt="marcas7">
-            <img src="./assets/imagenes/marcas2.jpg" alt="marcas8">
-            <img src="./assets/imagenes/marcas3.jpg" alt="marcas9">
-            <img src="./assets/imagenes/seguros1.png" alt="marcas10">
-            <img src="./assets/imagenes/seguros2.png" alt="marcas11">
-            <img src="./assets/imagenes/seguros4.png" alt="marcas12">
-            <img src="./assets/imagenes/marcas1.jpg" alt="marcas13">
-            <img src="./assets/imagenes/marcas2.jpg" alt="marcas14">
-            <img src="./assets/imagenes/marcas3.jpg" alt="marcas15">
-            <img src="./assets/imagenes/seguros1.png" alt="marcas16">
+            <img src="./assets/imagenes/marcas1.jpg" alt="logo de marcas asociadas1">
+            <img src="./assets/imagenes/marcas2.jpg" alt="logo de marcas asociadas2">
+            <img src="./assets/imagenes/marcas3.jpg" alt="logo de marcas asociadas3">
 
         </div>
 
@@ -117,48 +112,36 @@
             </p>
             <!-- Slider main container -->
             <div class="swiper">
+                <h3>Galería de Trabajos</h3>
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img src="./assets/imagenes/pintura1.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/pintura3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/bollo.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/auto1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/bollo2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/bollo3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/imagenes/taller.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/pintura1.webp" alt="imagen de pintura1"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/pintura3.jpg" alt="imagen de pintura3"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/bollo.webp" alt="imagen de bollo"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/auto1.jpg" alt="imagen de auto1"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/bollo2.jpg" alt="imagen de bollo2"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/bollo3.jpg" alt="imagen de bollo3"></div>
+                    <div class="swiper-slide"><img src="./assets/imagenes/taller.jpg" alt="imagen de taller"></div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev" aria-label="imagen anterior" title="imagen anterior"></div>
+                <div class="swiper-button-next" aria-label="imagen siguiente" title="imagen siguiente"></div>
 
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
-            <!-- Slider de imágenes de trabajos -->
-            <!-- <section class="slider">
-                <h3>Galería de trabajos</h3>
-                <div class="slider-container">
-                    <img src="./assets/imagenes/auto2.webp" alt="Trabajo 1">
-                    <img src="./assets/imagenes/auto1.jpg" alt="Trabajo 2">
-                    <img src="./assets/imagenes/sacabollos-08-10.png" alt="Trabajo 3">
-                    <img src="./assets/imagenes/OIP.webp" alt="Trabajo 4">
-                    <img src="./assets/imagenes/taller.jpg" alt="Trabajo 5">
-                </div>
-            </section> -->
-
-
 
             <!-- Sección de servicios destacados -->
             <section class="servicios-destacados">
-                <h3>Servicios Destacados</h3>
+                <h2>Servicios Destacados</h2>
                 <div class="servicios-lista">
                     <div class="servicio">
                         <i class="fas fa-car"></i>
-                        <h4>sacabollos</h4>
+                        <h3>sacabollos</h3>
                         <p>Utilizamos la elasticidad de la chapa, aplicando la temperatura optima para regresar la misma
                             a
                             su estado original, realizando un previo análisis del tamaño, ubicación, y forma de la
@@ -174,7 +157,7 @@
                     </div>
                     <div class="servicio">
                         <i class="fas fa-tools"></i>
-                        <h4>Pintura</h4>
+                        <h3>Pintura</h3>
 
                         <p>
                             En NIOBIO, la pintura automotriz es un arte que combina calidad, tecnología y
@@ -259,11 +242,12 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.3694998456576!2d-59.0286421244369!3d-34.1112890731348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b4fb6e39175%3A0x36cc3e0887e537f9!2sAlberti%201821%2C%20B2800KTI%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1753041628197!5m2!1ses-419!2sar"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de NIOBIO - Alberti 1821, Zárate"></iframe>
                 </div>
                 <!-- Sección de seguros -->
                 <div class="seguros">
-                    <img src="./assets/imagenes/seguros.png" alt="">
+                    <img src="./assets/imagenes/seguros.png" alt="Imagen de seguros">
                 </div>
                 <div class="boton-contacto">
                     <a href="./contacto.html" class="btn-contacto">Contáctanos</a>
@@ -295,6 +279,10 @@
             </div>
         </section>
     </footer>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491123456789?text=Hola%2C%20me%20interesa%20saber%20más%20sobre%20sus%20servicios"
+        class="whatsapp-float" target="_blank" title="Contactar por WhatsApp" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"

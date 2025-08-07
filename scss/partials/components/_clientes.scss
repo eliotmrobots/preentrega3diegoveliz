@@ -5,6 +5,12 @@
 .contenedor-clientes {
   @include mixin.flex(column, center, center);
   padding: 20px;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: variables.$text-color-primary;
+  }
 }
 .imagenes-clientes {
   @include mixin.grid(6, 1fr);
@@ -30,8 +36,8 @@
   .imagenes-clientes {
     @include mixin.grid(2, 1fr);
     img {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 80px;
     }
   }
 }
