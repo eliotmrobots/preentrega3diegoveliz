@@ -10,11 +10,3 @@
   grid-template-columns: repeat($columns, 1fr);
   gap: $gap;
 }
-// prueba de animacion //
-@mixin marcas-grid($columns-width, $gap, $max-width) {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: $columns-width;
-  gap: $gap;
-  max-width: $max-width;
-}

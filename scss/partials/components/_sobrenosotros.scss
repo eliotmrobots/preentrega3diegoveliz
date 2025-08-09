@@ -28,38 +28,7 @@
   box-shadow: 0 4px 8px #356ecb;
   overflow: hidden;
 }
-// posible cambio
-// .container {
-//   @include mixin.grid(3, 1fr);
-//   //   display: grid;
-//   //   grid-template-columns: repeat(3, 1fr);
-//   gap: 16px;
-// }
 
-// .image-item {
-//   @extend %card;
-//   display: flex;
-//   flex-direction: column;
-//   border-radius: 8px;
-//   padding: 8px;
-// }
-
-// .image-item img {
-//   width: 100%;
-//   height: auto;
-//   border-radius: 8px;
-//   margin-bottom: 8px;
-// }
-
-// .image-item p {
-//   padding: 12px;
-//   background-color: rgba(71, 17, 205, 0.8);
-//   border-radius: 8px;
-//   margin: 0;
-//   font-size: 14px;
-//   line-height: 1.4;
-//   padding: 50px;
-// }
 @media screen and (max-width: 480px) {
   .main-sobrenosotros {
     h1 {

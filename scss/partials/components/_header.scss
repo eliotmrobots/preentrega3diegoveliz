@@ -9,13 +9,12 @@
     to bottom,
     #000000 0 5px,
     #161a4d 5px 10px
-  ) !important; // !important para sobrescribir Bootstrap
-
+  ) !important;
   // Logo en navbar
   .navbar-brand {
     .logo {
       margin: 20px;
-      height: 125px; // Ajusta según necesites
+      height: 125px;
       border-radius: 50%;
       transition: transform 0.3s ease;
 
@@ -87,7 +86,7 @@
     }
     .navbar-collapse {
       .navbar-nav {
-        gap: 15px; // Menos espacio en tablet
+        gap: 15px;
       }
     }
   }
